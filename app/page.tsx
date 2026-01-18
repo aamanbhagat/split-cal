@@ -1,4 +1,15 @@
-import ExpenseCalculator from '@/app/components/ExpenseCalculator';
+import dynamic from 'next/dynamic';
+
+// Dynamic import for calculator to reduce initial bundle size
+const ExpenseCalculator = dynamic(() => import('@/app/components/ExpenseCalculator'), {
+  loading: () => <div className="bg-white text-black rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border-2 border-white min-h-[400px] flex items-center justify-center">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-black mx-auto mb-4"></div>
+      <p className="text-lg font-semibold">Loading calculator...</p>
+    </div>
+  </div>,
+  ssr: false,
+});
 
 export default function Home() {
   const jsonLd = {
