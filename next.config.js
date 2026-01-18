@@ -8,7 +8,6 @@ const nextConfig = {
   // Performance optimizations
   experimental: {
     optimizePackageImports: ['lucide-react'],
-    optimizeCss: true,
   },
 
   // Production optimizations
