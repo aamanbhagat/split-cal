@@ -15,6 +15,13 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
 
+  // Target modern browsers to reduce polyfills
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+    reactRemoveProperties: process.env.NODE_ENV === 'production',
+  },
+
   // Module optimization
   modularizeImports: {
     'lucide-react': {

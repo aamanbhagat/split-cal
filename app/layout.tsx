@@ -8,10 +8,11 @@ const inter = Inter({
   display: 'swap',
   preload: true,
   variable: '--font-inter',
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://yourdomain.com'),
+  metadataBase: new URL('https://split-cal.vercel.app'),
   title: {
     default: 'Smart Expense Splitter - Split Bills & Calculate Tips Instantly',
     template: '%s | Smart Expense Splitter',
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://yourdomain.com',
+    url: 'https://split-cal.vercel.app',
     title: 'Smart Expense Splitter - Split Bills Instantly',
     description:
       'Free online expense splitter. Calculate tips, split bills, and share costs easily.',
@@ -73,17 +74,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        {/* Preconnect for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Critical CSS is in globals.css and inlined by Next.js */}
-        
-        {/* Theme color for mobile browsers */}
-        <meta name="theme-color" content="#8b5cf6" />
-        
-        {/* Viewport for mobile optimization */}
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        {/* DNS Prefetch for performance */}
+        <link rel="dns-prefetch" href="https://vercel.live" />
       </head>
       <body className="min-h-screen bg-black font-sans antialiased">
         {/* Skip to main content for accessibility */}

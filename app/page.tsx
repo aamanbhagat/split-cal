@@ -17,7 +17,7 @@ export default function Home() {
     '@type': 'WebApplication',
     name: 'Smart Expense Splitter',
     description: 'Free online expense splitter and tip calculator - Split bills instantly with friends',
-    url: 'https://yourdomain.com',
+    url: 'https://split-cal.vercel.app',
     applicationCategory: 'FinanceApplication',
     operatingSystem: 'Any',
     offers: {
