@@ -76,6 +76,8 @@ export default function RootLayout({
       <head>
         {/* DNS Prefetch for performance */}
         <link rel="dns-prefetch" href="https://vercel.live" />
+        {/* Ad Script */}
+        <script src="https://quge5.com/88/tag.min.js" data-zone="203207" async data-cfasync="false"></script>
       </head>
       <body className="min-h-screen bg-black font-sans antialiased">
         {/* Skip to main content for accessibility */}
