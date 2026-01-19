@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 
 // Optimize font loading with next/font
@@ -96,6 +97,7 @@ export default function RootLayout({
         <footer className="py-8 text-center text-white text-sm">
           <p>© {new Date().getFullYear()} Smart Expense Splitter. Free forever.</p>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
